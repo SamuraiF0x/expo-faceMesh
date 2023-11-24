@@ -1,0 +1,70 @@
+{
+	"expo": {
+		"name": "Kopilot",
+		"slug": "kopilot",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/logos/tamagui.svg",
+		"userInterfaceStyle": "automatic",
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#080B1C"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true,
+			"infoPlist": {
+				"NSCameraUsageDescription": "$(PRODUCT_NAME) needs access to your Camera.",
+				"NSMicrophoneUsageDescription": "$(PRODUCT_NAME) needs access to your Microphone."
+			}
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#080B1C"
+			},
+			"permissions": ["android.permission.CAMERA", "android.permission.RECORD_AUDIO"],
+			"package": "com.samuraif0x.kopilot"
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "b83d36ea-3779-4e88-9907-d8f75314964a"
+			}
+		},
+		"owner": "samuraif0x",
+		"plugins": [
+			[
+				"expo-build-properties",
+				{
+					"android": {
+						"minSdkVersion": 26,
+						"compileSdkVersion": 33,
+						"targetSdkVersion": 33,
+						"buildToolsVersion": "33.0.0"
+					},
+					"ios": {
+						"deploymentTarget": "13.0"
+					}
+				}
+			],
+			// [
+			// 	"react-native-vision-camera",
+			// 	{
+			// 		"cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera.",
+			// 		"enableMicrophonePermission": true,
+			// 		"microphonePermissionText": "$(PRODUCT_NAME) needs access to your Microphone."
+			// 	}
+			// ],
+			[
+				"expo-camera",
+				{
+					"cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+				}
+			]
+		]
+	}
+}

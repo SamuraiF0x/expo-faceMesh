@@ -1,0 +1,47 @@
+{
+	"extends": ["expo/tsconfig.base", "@tsconfig/react-native/tsconfig.json"],
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"skipLibCheck": true,
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-native",
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"plugins": [
+			{
+				"name": "@nderscore/tamagui-typescript-plugin",
+				"pathToApp": "./src",
+				"defaultTheme": "dark",
+				"colorTileSize": 18,
+				"completionFilters": {
+					"showColorTokens": true,
+					"showTrueTokens": true,
+					"custom": {}
+				}
+			}
+		]
+	},
+	"include": ["src", "**/*.ts", "**/*.tsx"],
+	"types": ["react", "react-dom", "react-native", "react-test-renderer", "jest"],
+	"exclude": [
+		"build",
+		"coverage",
+		"node_modules",
+		"babel.config.js",
+		".eslintrc.js",
+		".prettirerrc.js",
+		"metro.config.js",
+		"jest.config.js",
+		"index.js",
+		"src/app/App.js"
+	]
+}
